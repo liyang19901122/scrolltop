@@ -1,0 +1,44 @@
+<!doctype>
+<html>
+	<head>
+		<link rel="stylesheet" href="./css/scrolltop.css" type="text/css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script src="./js/scrolltop.js"></script>
+	</head>
+	<body>
+		
+	<style type="text/css">
+	html,body {
+		width:100%;
+		height:100%;
+		margin:0px;
+		padding:0px;
+		overflow:hidden;
+	}
+	#Main {
+		position:absolute;
+		bottom:0px;
+		left:0px;
+		width:100%;
+		height:100%;
+		overflow:auto;
+		z-index:1;
+	}
+	
+	</style>
+
+	<div id="scrolltop">
+		<input type="button" value="return" id="btn-return">
+	</div>
+		<div id="Main">
+			<p style="height:2000px;">Content: Test</p>
+		</div>
+	</body>
+	<script>
+    //invoke the tool
+	$(function(){
+		var sl = scrolltop();
+		sl.scrolltopFunc("Main","btn-return",0);
+	});
+	</script>
+</html>
